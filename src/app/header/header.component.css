@@ -1,0 +1,13 @@
+header {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: -10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: rgba(0, 62, 159, 0.95);
+  color: white; }
+
+.center {
+  text-align: center; }
+
+/*# sourceMappingURL=header.component.css.map */
