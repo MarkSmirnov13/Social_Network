@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,YAAY;EACV,IAAI,EAAE,QAAQ;EACd,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,mBAAmB;EAC3B,aAAa,EAAE,GAAG;EAClB,WAAW,EAAE,GAAG",
+"mappings": "AAAA,YAAY;EACV,IAAI,EAAE,QAAQ;EACd,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,mBAAmB;EAC3B,aAAa,EAAE,GAAG;EAClB,WAAW,EAAE,EAAE",
 "sources": ["main.component.sass"],
 "names": [],
 "file": "main.component.css"

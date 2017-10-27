@@ -6,3 +6,13 @@
   margin-right: 10%;
   margin-top: 1%;
 }
+.flex-block2 {
+  flex: 5 1 50px;
+  background: white;
+  border: 0.5px solid #d5d0ce;
+  border-radius: 2px;
+
+}
+
+.flex-block1 {
+  flex: 1 1 50px; }
