@@ -1,2 +1,10 @@
-<div><p>Что-то</p></div>
+<div id="main">
+  <h2 class="center">Новости</h2>
+</div>
+
+<form id="form" (ngSubmit)="onSubmit(); form.reset()" #form="ngForm">
+  <input type="text" name="title" [(ngModel)]="title" placeholder="Что новенького?" class="form" required>
+  <button type="submit">Опубликовать</button>
+</form>
+
 

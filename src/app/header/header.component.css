@@ -4,11 +4,12 @@ header {
   margin-top: -10px;
   padding-top: 1px;
   padding-bottom: 1px;
-  background: rgba(0, 61, 158, 0.95);
-  border: solid 1px darkblue;
-  color: white; }
+  background: rgba(0, 88, 153, 0.69);
+  color: white;
+  box-shadow: 0 -2px 5px rgba(122, 122, 122, 0.5); }
 
 .center {
-  text-align: center; }
+  text-align: center;
+  font-size: 15px; }
 
 /*# sourceMappingURL=header.component.css.map */
