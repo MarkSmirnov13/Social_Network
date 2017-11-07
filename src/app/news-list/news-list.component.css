@@ -1,0 +1,66 @@
+#form {
+  margin-left: 410px;
+  margin-bottom: 5px;
+  margin-top: 13px;
+  margin-right: 230px;
+  background: white;
+  border: 0.5px solid #d5d0ce;
+  border-radius: 2px;
+  min-width: 500px; }
+
+.form {
+  margin-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 85%; }
+
+#newslist {
+  margin-left: 410px;
+  margin-bottom: 5px;
+  margin-top: 13px;
+  margin-right: 230px;
+  background: white;
+  border: 0.5px solid #d5d0ce;
+  border-radius: 2px;
+  min-width: 500px; }
+
+.button {
+  font-size: 100%;
+  text-decoration: none;
+  user-select: none;
+  padding: 7px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  transition: all 0.218s ease 0s;
+  position: fixed;
+  color: #2b587a; }
+
+.button:hover {
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.button:active {
+  border: 1px solid #cccccc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset; }
+
+.input-area {
+  background: #e3e8cc;
+  border: solid 1px black;
+  padding: 5px 0 5px 5px;
+  margin-bottom: 25px;
+  overflow: auto; }
+
+textarea {
+  float: left;
+  resize: none;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  width: 83%; }
+
+textarea::placeholder {
+  text-align: left;
+  font-size: 24px; }
+
+/*# sourceMappingURL=news-list.component.css.map */
