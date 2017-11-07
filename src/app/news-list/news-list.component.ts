@@ -9,13 +9,11 @@ export class NewsListComponent implements OnInit {
   items: string[] = [];
 
   publishNews (item: string) {
-    /*let txt = document.getElementById('name').value;
-    if(txt == '')
-    {
-      alert('Вы забыли ввести новость.');
+    if (item == '') {
+      alert("Вы не ввели новость!");
       return false;
     }
-    else*/
+    else
       this.items.push(item);
   }
 

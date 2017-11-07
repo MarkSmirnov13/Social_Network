@@ -7,6 +7,10 @@ import { LeftListComponent } from './left-list/left-list.component';
 import { MainComponent } from './main/main.component';
 import { NewsListComponent } from './news-list/news-list.component';
 import { NewsListItemComponent } from './news-list-item/news-list-item.component';
+import { ProfileComponent } from './profile/profile.component';
+import {FormsModule} from "@angular/forms";
+import { NameComponent } from './name/name.component';
+import { PhotoComponent } from './photo/photo.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +19,14 @@ import { NewsListItemComponent } from './news-list-item/news-list-item.component
     LeftListComponent,
     MainComponent,
     NewsListComponent,
-    NewsListItemComponent
+    NewsListItemComponent,
+    ProfileComponent,
+    NameComponent,
+    PhotoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
