@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LeftListComponent } from './left-list/left-list.component';
 import { MainComponent } from './main/main.component';
-import { NewsComponent } from './news/news.component';
+import { NewsListComponent } from './news-list/news-list.component';
+import { NewsListItemComponent } from './news-list-item/news-list-item.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { NewsComponent } from './news/news.component';
     HeaderComponent,
     LeftListComponent,
     MainComponent,
-    NewsComponent
+    NewsListComponent,
+    NewsListItemComponent
   ],
   imports: [
     BrowserModule
