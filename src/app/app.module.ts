@@ -11,6 +11,8 @@ import { ProfileComponent } from './profile/profile.component';
 import {FormsModule} from "@angular/forms";
 import { NameComponent } from './name/name.component';
 import { PhotoComponent } from './photo/photo.component';
+import {RouterModule} from '@angular/router';
+import {appRoutes} from './app.router';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { PhotoComponent } from './photo/photo.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(
+      appRoutes
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

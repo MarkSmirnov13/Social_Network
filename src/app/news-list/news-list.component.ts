@@ -14,7 +14,7 @@ export class NewsListComponent implements OnInit {
       return false;
     }
     else
-      this.items.push(item);
+      this.items = [item, ...this.items];
   }
 
   constructor() { }
