@@ -1,7 +1,7 @@
 <div id="form" class="input-area">
-  <form onsubmit="return checkformufinforum(this)"  method="post">
+  <form>
     <textarea id="stt" name="area" rows="1" placeholder="Что новенького?" type="text" required #itemInput></textarea>
-    <a href="#" class="button" (click)="publishNews(itemInput.value); itemInput.value = ''">Опубликовать</a>
+    <a class="button" (click)="publishNews(itemInput.value); itemInput.value = ''">Опубликовать</a>
     <!--<input class="button" type="submit" (click)="publishNews(itemInput.value); itemInput.value = ''">-->
   </form>
 </div>

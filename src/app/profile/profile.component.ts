@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PhotoComponent } from "../photo/photo.component";
+//import { PhotoComponent } from "../photo/photo.component";
 
 @Component({
   selector: 'app-profile',

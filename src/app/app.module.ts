@@ -13,6 +13,7 @@ import { NameComponent } from './name/name.component';
 import { PhotoComponent } from './photo/photo.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.router';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {appRoutes} from './app.router';
     NewsListItemComponent,
     ProfileComponent,
     NameComponent,
-    PhotoComponent
+    PhotoComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,7 @@ import {appRoutes} from './app.router';
     )
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [RegistrationComponent]
 })
 export class AppModule { }

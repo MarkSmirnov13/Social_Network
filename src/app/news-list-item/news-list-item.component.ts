@@ -9,6 +9,8 @@ export class NewsListItemComponent implements OnInit {
 
   @Input() value = ' ';
 
+
+
   constructor() { }
 
   ngOnInit() {
