@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//import { MasonryModule } from 'angular2-masonry';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,8 +13,9 @@ import {FormsModule} from "@angular/forms";
 import { NameComponent } from './name/name.component';
 import { PhotoComponent } from './photo/photo.component';
 import {RouterModule} from '@angular/router';
-import {appRoutes} from './app.router';
+import { appRoutes } from './app.router';
 import { RegistrationComponent } from './registration/registration.component';
+import { UserService } from "./services/loginservices";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { RegistrationComponent } from './registration/registration.component';
       appRoutes
     )
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent],
   exports: [RegistrationComponent]
 })

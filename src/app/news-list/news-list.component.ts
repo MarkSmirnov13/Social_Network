@@ -19,11 +19,12 @@ export class NewsListComponent implements OnInit {
     }
     else
       this.items = [item, ...this.items];
-      //this.item = this.ls.setItemToLS('item', this.items);
+      var Item = this.ls.setItemToLS('item', this.items);
+      var Items = this.ls.getItemFromLS('item');
   }
 
   ngOnInit() {
-    //this.item = this.ls.getItemFromLS('item');
+      var Items = this.ls.getItemFromLS('item');
   }
   //item;
 }

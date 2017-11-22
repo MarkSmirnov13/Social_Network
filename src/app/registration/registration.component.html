@@ -1,49 +1,46 @@
 <form id="main">
-  <div id="container_demo" >
-    <div id="wrapper">
-      <div id="login" class="animate form">
-          <h1>Вход</h1>
-          <div>
-            <input class="user" type="text" class="input" placeholder="Username" name="username">
+  <div class="login-wrap">
+    <div class="login-html">
+      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+      <div class="login-form">
+        <div class="sign-in-htm">
+          <div class="group">
+            <input class="user" type="text" class="input" placeholder="Имя пользователя" name="username" [(ngModel)]="username" #itemInput>
           </div>
           <div>
-            <input class="pass" type="password" class="input" data-type="password" placeholder="Password" name="password">
+            <input class="pass" type="password" class="input" data-type="password" placeholder="Пароль" name="password" [(ngModel)]="password" #itemInput>
           </div>
           <div class="keeplogin">
             <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
             <label for="loginkeeping">Запомнить меня</label>
           </div>
-          <div class="login button">
-            <input type="button" class="button">
+          <div class="group">
+            <input type="button" class="button" value="Войти" (click)="SignIn(itemInput.value)">
           </div>
-          <p class="change_link">
-            Не зарегистрированы еще ?
-            <a href="#toregister" class="to_register">Присоединяйтесь</a>
-          </p>
-      </div>
+        </div>
 
-      <div id="register" class="animate form">
-          <h1> Регистрация </h1>
+        <div class="sign-up-htm">
           <div>
-            <input id="user" type="text" class="input" placeholder="Username" name="username">
+            <input id="user" type="text" class="input" placeholder="Имя пользователя" name="username" [(ngModel)]="username" #itemInput>
           </div>
           <div>
-            <input id="pass" type="text" class="input" placeholder="Email Address" name="email">
+            <input id="pass" type="text" class="input" placeholder="Email адрес" name="email" [(ngModel)]="email" #itemInput>
           </div>
           <div>
-            <input class="pass" type="password" class="input" data-type="password" placeholder="Password" name="password" >
+            <input class="pass" type="password" class="input" data-type="password" placeholder="Пароль" name="password" [(ngModel)]="password" #itemInput>
           </div>
           <div>
-            <input class="pass" type="password" class="input" data-type="password" placeholder="Repeat Password" name="repeatPassword" >
+            <input class="pass" type="password" class="input" data-type="password" placeholder="Еще раз пароль" name="repeatPassword" [(ngModel)]="repeatPassword" #itemInput>
           </div>
-          <p class="signin button">
-            <input type="button" class="button">
+          <p class="sign in button">
+            <input type="button" class="button" value="Зарегистрироваться" (click)="SignUp(itemInput.value)">
           </p>
-          <p class="change_link">
-            Уже зарегистрированы ?
-            <a href="#tologin" class="to_register"> Войдите на сайт </a>
-          </p>
+        </div>
       </div>
     </div>
   </div>
 </form>
+
+
+

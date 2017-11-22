@@ -9,5 +9,4 @@ export const appRoutes: Routes = [
   {path: 'profile', component: ProfileComponent}
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
 
