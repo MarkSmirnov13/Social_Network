@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {User} from '../shared/login';
 import {Subject} from 'rxjs/Subject';
-import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class UserService{
@@ -10,14 +9,17 @@ export class UserService{
   addUser(user: User): void {
     let key: string = user.username;
     let data: string = JSON.stringify(user);
+    localStorage.setItem('currentUser', data);
     localStorage.setItem(key, data);
   }
-  getUserByUserName(username: string): User{
+  getUserByName(username: string): User{
     let user = <User> JSON.parse(localStorage.getItem(username));
+    localStorage.setItem('currentUser', JSON.stringify(user));
     this.subject.next(user);
     return user;
   }
-  getCurrentUser(): Observable<User>{
-    return this.subject
+
+  SignOut(): void{
+    localStorage.removeItem('currentUser');
   }
 }

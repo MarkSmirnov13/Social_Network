@@ -1,30 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { Service } from "../Service";
+import { newService} from "../services/newservice";
+import { News} from "../shared/news";
 
 @Component({
   selector: 'app-news-list',
   templateUrl: './news-list.component.html',
   styleUrls: ['./news-list.component.sass'],
-  providers: [Service]
 })
 export class NewsListComponent implements OnInit {
-  items: string[] = [];
-
-  constructor(private ls:Service) { }
+  items: string;
+  newService: newService;
+  //freshNew: News;
 
   publishNews (item: string) {
+    let news = new News(this.items);
     if (item == '') {
       alert("Вы не ввели новость!");
       return false;
     }
     else
-      this.items = [item, ...this.items];
-      var Item = this.ls.setItemToLS('item', this.items);
-      var Items = this.ls.getItemFromLS('item');
+      this.newService.addNews(news);
+      this.newService.getAllNews(news.item);
   }
 
+  /*constructor(newService: newService) {
+    this.newService = newService;
+    this.freshNew = this.newService.getAllNews("freshNew");
+  }*/
+
   ngOnInit() {
-      var Items = this.ls.getItemFromLS('item');
   }
-  //item;
 }

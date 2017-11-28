@@ -8,11 +8,16 @@
   border: 0.5px solid #d5d0ce
   border-radius: 2px
   min-width: 500px
+  height: 400px
+
+input
+  border: none
+  outline: none
 
 .login-wrap
   width: 100%
-  margin: auto
-  max-width: 525px
+  margin-top: -10%
+  max-width: 550px
   min-height: 600px
   position: relative
 
@@ -31,23 +36,16 @@
   position: absolute
   transform: rotateY(180deg)
   backface-visibility: hidden
-  //transition: all .4s linear
 
 .login-html .sign-in,
 .login-html .sign-up,
 .login-form .group .check
   display: none
 
-.login-html .tab,
-.login-form .group .label,
-//.login-form .group .button
-  text-transform: uppercase
-
 .login-html .tab
   font-size: 22px
-  margin-right: 15px
   padding-bottom: 5px
-  margin: 0 15px 10px 0
+  margin: 15px 15px 15px 0
   display: inline-block
   border-bottom: 2px solid transparent
 
@@ -67,7 +65,7 @@
 
 .login-form .group .label,
 .login-form .group .input,
-.login-form .group .button
+.login-form .group
   width: 100%
   color: grey
   display: block
@@ -78,9 +76,9 @@
 .login-form .group .input,
 .login-form .group .button
   border: solid 1px grey
-  padding: 15px 20px
-  border-radius: 25px
-  background: rgba(255,255,255,.1)
+  padding: 15px 2px
+  border-radius: 5px
+  background: rgba(255,255,255,1)
 
 .login-form .group input[data-type="password"]
   text-security: circle
@@ -89,49 +87,6 @@
 .login-form .group .label
   color: #aaa
   font-size: 12px
-
-//.login-form .group .button
-  background: #D94E67
-
-//.login-form .group label .icon
-  width: 15px
-  height: 15px
-  border-radius: 2px
-  position: relative
-  display: inline-block
-  background: #591E23
-
-.login-form .group label .icon:before,
-//.login-form .group label .icon:after
-  content: ''
-  width: 10px
-  height: 2px
-  background: #fff
-  position: absolute
-  transition: all .2s ease-in-out 0s
-
-//.login-form .group label .icon:before
-  left: 3px
-  width: 5px
-  bottom: 6px
-  transform: scale(0) rotate(0)
-
-//.login-form .group label .icon:after
-  top: 6px
-  right: 0
-  transform: scale(0) rotate(0)
-
-//.login-form .group .check:checked + label
-  color: grey
-
-//.login-form .group .check:checked + label .icon
-  background: #591E23
-
-//.login-form .group .check:checked + label .icon:before
-  transform: scale(1) rotate(45deg)
-
-//.login-form .group .check:checked + label .icon:after
-  transform: scale(1) rotate(-45deg)
 
 .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm
   transform: none
@@ -147,17 +102,17 @@
   outline: none
   border: 1px solid rgba(0,0,0,.1)
   border-radius: 2px
-  //background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1)
+  background: rgb(245,245,245) linear-gradient(#f4f4f4, #f1f1f1)
   transition: all .218s ease 0s
   position: absolute
   color: #2b587a
 
 .button:hover
   border: 1px solid rgb(198,198,198)
-  //background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1)
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1)
   box-shadow: 0 1px 2px rgba(0,0,0,.1)
 
 .button:active
   border: 1px solid rgb(204,204,204)
-  //background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224))
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224))
   box-shadow: 0 1px 2px rgba(0,0,0,.1) inset

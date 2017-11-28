@@ -1,41 +1,39 @@
 <form id="main">
   <div class="login-wrap">
     <div class="login-html">
-      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Войти</label>
+      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Зарегистрироваться</label>
       <div class="login-form">
         <div class="sign-in-htm">
           <div class="group">
             <input class="user" type="text" class="input" placeholder="Имя пользователя" name="username" [(ngModel)]="username" #itemInput>
           </div>
-          <div>
+          <div class="group">
             <input class="pass" type="password" class="input" data-type="password" placeholder="Пароль" name="password" [(ngModel)]="password" #itemInput>
           </div>
-          <div class="keeplogin">
+          <div class="group">
             <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
             <label for="loginkeeping">Запомнить меня</label>
           </div>
-          <div class="group">
+          <div>
             <input type="button" class="button" value="Войти" (click)="SignIn(itemInput.value)">
           </div>
         </div>
 
         <div class="sign-up-htm">
-          <div>
+          <div class="group">
             <input id="user" type="text" class="input" placeholder="Имя пользователя" name="username" [(ngModel)]="username" #itemInput>
           </div>
-          <div>
+          <div class="group">
             <input id="pass" type="text" class="input" placeholder="Email адрес" name="email" [(ngModel)]="email" #itemInput>
           </div>
-          <div>
+          <div class="group">
             <input class="pass" type="password" class="input" data-type="password" placeholder="Пароль" name="password" [(ngModel)]="password" #itemInput>
           </div>
-          <div>
+          <div class="group">
             <input class="pass" type="password" class="input" data-type="password" placeholder="Еще раз пароль" name="repeatPassword" [(ngModel)]="repeatPassword" #itemInput>
           </div>
-          <p class="sign in button">
-            <input type="button" class="button" value="Зарегистрироваться" (click)="SignUp(itemInput.value)">
-          </p>
+          <input type="button" class="button" value="Зарегистрироваться" (click)="SignUp(itemInput.value)">
         </div>
       </div>
     </div>

@@ -16,6 +16,9 @@ import {RouterModule} from '@angular/router';
 import { appRoutes } from './app.router';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserService } from "./services/loginservices";
+import { MessagesComponent } from './messages/messages.component';
+import { ChatThreadsComponent } from './messages/chat-threads/chat-threads.component';
+import { ChatThreadComponent } from './messages/chat-thread/chat-thread.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +31,16 @@ import { UserService } from "./services/loginservices";
     ProfileComponent,
     NameComponent,
     PhotoComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    MessagesComponent,
+    ChatThreadsComponent,
+    ChatThreadComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(
-      appRoutes
+      appRoutes,
     )
   ],
   providers: [UserService],

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/loginservices';
+import { User } from '../shared/login';
 
 @Component({
   selector: 'app-name',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NameComponent implements OnInit {
 
-  userName: string[] = [];
+  userService: UserService;
+  currentUser: User;
 
-  constructor() { }
+  constructor(userService: UserService) {
+    this.userService = userService;
+    this.currentUser = this.userService.getUserByName("currentUser");
+  }
 
   ngOnInit() {
   }

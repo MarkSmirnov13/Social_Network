@@ -17,31 +17,30 @@ export class RegistrationComponent {
   email: string;
   userService: UserService;
   router: Router;
+
   constructor (userService: UserService, router: Router) {
     this.userService = userService;
     this.router = router;
   }
+
   SignUp(username: string) {
     let user = new User(this.username, this.password, this.email)
     if (username == '')
       alert("Введите Данные!");
     else {
       this.userService.addUser(user);
-      this.userService.getUserByUserName(user.username);
-      this.router.navigateByUrl('main');
+      this.userService.getUserByName(user.username);
+      window.location.assign('main');
     }
   }
 
   SignIn():void{
-    let currentUser = this.userService.getUserByUserName(this.username);
+    let currentUser = this.userService.getUserByName(this.username);
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
     if(currentUser){
-      this.router.navigateByUrl('main');
+      window.location.assign('main');
     }else {
       alert("Данного пользователя не существует!");
     }
   }
-
-
-
-
 }
