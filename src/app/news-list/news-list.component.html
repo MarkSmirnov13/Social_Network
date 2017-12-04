@@ -2,10 +2,14 @@
   <form>
     <textarea id="stt" name="area" rows="1" placeholder="Что новенького?" type="text" required #itemInput [(ngModel)]="items"></textarea>
     <!--<a class="button" (click)="publishNews(itemInput.value); itemInput.value = ''">Опубликовать</a>-->
-    <input class="button" type="button" (click)="publishNews(itemInput.value); itemInput.value = ''">
+    <input class="button" type="button" (click)="publishNews(itemInput.value); itemInput.value = ''" value="Опубликовать">
   </form>
 </div>
-<div id="newslist">
-  <app-news-list-item></app-news-list-item>
-</div>
+<!--<div id="newslist" *ngFor="let item of items">
+  <app-news-list-item [value]="item"></app-news-list-item>
+</div>-->
 
+<div id="newslist" *ngFor="let news of freshNews">
+  <p>{{ news.item }}</p>
+  <!--<app-news-list-item></app-news-list-item>-->
+</div>

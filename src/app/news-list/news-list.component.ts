@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { newService} from "../services/newservice";
-import { News} from "../shared/news";
+import { NewService } from '../services/newservice';
+import { News } from '../shared/news';
 
 @Component({
   selector: 'app-news-list',
@@ -9,24 +9,26 @@ import { News} from "../shared/news";
 })
 export class NewsListComponent implements OnInit {
   items: string;
-  newService: newService;
-  //freshNew: News;
+  newService: NewService;
+  freshNews: News[];
 
-  publishNews (item: string) {
-    let news = new News(this.items);
-    if (item == '') {
-      alert("Вы не ввели новость!");
+  publishNews(item: string): boolean {
+    const news = new News(this.items);
+    if (item === '') {
+      alert('Вы не ввели новость!');
       return false;
     }
-    else
-      this.newService.addNews(news);
-      this.newService.getAllNews(news.item);
+    this.newService.addNews(news);
+    this.newService.getAllNews();
+
   }
 
-  /*constructor(newService: newService) {
+  constructor(newService: NewService) {
     this.newService = newService;
-    this.freshNew = this.newService.getAllNews("freshNew");
-  }*/
+    this.freshNews = this.newService.getAllNews();
+    this.newService.subject.subscribe(news => this.freshNews = news);
+  }
+
 
   ngOnInit() {
   }

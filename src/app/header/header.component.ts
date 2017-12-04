@@ -23,7 +23,8 @@ export class HeaderComponent implements OnInit {
   signOut(): void {
     this.userService.SignOut();
     this.currentUser = null;
-    this.router.navigateByUrl('sign');
+    // this.router.navigateByUrl('');
+    window.location.assign('');
   }
 
   ngOnInit() {

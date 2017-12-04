@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { newService} from "../services/newservice";
-import { News} from "../shared/news";
+import { NewService } from '../services/newservice';
+import { News } from '../shared/news';
 
 @Component({
   selector: 'app-news-list-item',
@@ -8,14 +8,13 @@ import { News} from "../shared/news";
   styleUrls: ['./news-list-item.component.sass']
 })
 export class NewsListItemComponent implements OnInit {
-  newService: newService;
-  freshNew: News;
+  newService: NewService;
+  freshNews: News[];
 
-  //@Input() value = ' ';
 
-  constructor(newService: newService) {
+  constructor(newService: NewService) {
     this.newService = newService;
-    this.freshNew = this.newService.getAllNews("freshNew");
+    //this.freshNews = this.newService.getAllNews();
   }
 
   ngOnInit() {

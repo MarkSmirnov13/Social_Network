@@ -19,6 +19,11 @@ import { UserService } from "./services/loginservices";
 import { MessagesComponent } from './messages/messages.component';
 import { ChatThreadsComponent } from './messages/chat-threads/chat-threads.component';
 import { ChatThreadComponent } from './messages/chat-thread/chat-thread.component';
+import {News} from "./shared/news";
+import { UsersService } from "./messages/user/user.service";
+import { ThreadsService } from "./messages/Thread/threads.service";
+import {MessagesService} from "./messages/message/messages.service";
+import { NewService } from "./services/newservice";
 
 @NgModule({
   declarations: [
@@ -43,7 +48,7 @@ import { ChatThreadComponent } from './messages/chat-thread/chat-thread.componen
       appRoutes,
     )
   ],
-  providers: [UserService],
+  providers: [UserService, NewService, UsersService, MessagesService],
   bootstrap: [AppComponent],
   exports: [RegistrationComponent]
 })
