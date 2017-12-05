@@ -17,6 +17,7 @@ export class RegistrationComponent {
   email: string;
   userService: UserService;
   router: Router;
+  id: number;
 
   constructor (userService: UserService, router: Router) {
     this.userService = userService;
@@ -24,7 +25,7 @@ export class RegistrationComponent {
   }
 
   SignUp(username: string) {
-    let user = new User(this.username, this.password, this.email)
+    let user = new User(this.username, this.password, this.email, Math.floor(Math.random() * 100000));
     if (username == '')
       alert("Введите Данные!");
     else {

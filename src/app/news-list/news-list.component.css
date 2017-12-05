@@ -34,6 +34,7 @@
   border-radius: 2px;
   transition: all 0.218s ease 0s;
   position: absolute;
+  background-color: white;
   color: #2b587a; }
 
 .button:hover {
@@ -63,7 +64,15 @@ textarea::placeholder {
   text-align: left;
   font-size: 24px; }
 
-p {
+.p {
   margin-left: 5px; }
+
+.style {
+  font-size: 10px;
+  text-align: right;
+  font-style: italic;
+  margin-right: 5px;
+  margin-top: -20px;
+  color: #2b587a; }
 
 /*# sourceMappingURL=news-list.component.css.map */

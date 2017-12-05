@@ -16,14 +16,16 @@ import {RouterModule} from '@angular/router';
 import { appRoutes } from './app.router';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserService } from "./services/loginservices";
-import { MessagesComponent } from './messages/messages.component';
-import { ChatThreadsComponent } from './messages/chat-threads/chat-threads.component';
-import { ChatThreadComponent } from './messages/chat-thread/chat-thread.component';
+// import { MessagesComponent } from './messages/messages.component';
+// import { ChatThreadsComponent } from './messages/chat-threads/chat-threads.component';
+// import { ChatThreadComponent } from './messages/chat-thread/chat-thread.component';
 import {News} from "./shared/news";
-import { UsersService } from "./messages/user/user.service";
-import { ThreadsService } from "./messages/Thread/threads.service";
-import {MessagesService} from "./messages/message/messages.service";
+// import { UsersService } from "./messages/user/user.service";
+// import { ThreadsService } from "./messages/Thread/threads.service";
+// import {MessagesService} from "./messages/message/messages.service";
 import { NewService } from "./services/newservice";
+import { MessagesComponent } from './messages/messages.component';
+// import { ChatWindowComponent } from "./messages/chat-window/chat-window.component";
 
 @NgModule({
   declarations: [
@@ -38,8 +40,10 @@ import { NewService } from "./services/newservice";
     PhotoComponent,
     RegistrationComponent,
     MessagesComponent,
-    ChatThreadsComponent,
-    ChatThreadComponent
+    //MessagesComponent,
+    // ChatThreadsComponent,
+    // ChatThreadComponent
+    // ChatWindowComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,7 @@ import { NewService } from "./services/newservice";
       appRoutes,
     )
   ],
-  providers: [UserService, NewService, UsersService, MessagesService],
+  providers: [UserService, NewService],
   bootstrap: [AppComponent],
   exports: [RegistrationComponent]
 })
